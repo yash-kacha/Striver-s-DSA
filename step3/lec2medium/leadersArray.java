@@ -6,7 +6,7 @@ import java.util.List;
 
 public class leadersArray {
     public static void main(String[] args) {
-        int[] in = new int[] {};
+        int[] in = new int[] { 10, 22, 12, 3, 0, 6 };
         System.out.println(Arrays.toString(leader(in)));
     }
 
