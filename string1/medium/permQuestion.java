@@ -2,7 +2,7 @@ package string1.medium;
 
 public class permQuestion {
     public static void main(String[] args) {
-        String in = "? * 8 = 6?";
+        String in = "56? + 80 = 6?0";
 
         System.out.println(comp(in));
     }

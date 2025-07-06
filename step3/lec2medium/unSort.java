@@ -7,7 +7,11 @@ import java.util.Random;
 import java.util.TreeMap;
 
 public class unSort {
+
     public static void main(String[] args) {
+
+        int n = 999;
+        System.out.println((int) (Math.log10(n)) + 1);
 
         int[] in = new int[] { 1, 5, 99, 22, 10, 22, 30, 2, 3, 6, 4, 30 };
 
