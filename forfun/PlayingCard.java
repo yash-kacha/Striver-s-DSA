@@ -1,6 +1,5 @@
 package forfun;
 
-import java.lang.classfile.instruction.ArrayStoreInstruction;
 import java.util.*;
 
 public class PlayingCard {
@@ -299,7 +298,7 @@ public class PlayingCard {
     public static List<List<String>> teen(List<String> deck) {
         List<List<String>> ans = new ArrayList<>();
 
-        int playerCnt = 2;
+        int playerCnt = 9;
         for (int i = 0; i < playerCnt; i++) {
             ans.add(new ArrayList<>());
         }
