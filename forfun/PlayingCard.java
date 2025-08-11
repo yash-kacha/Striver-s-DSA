@@ -44,7 +44,7 @@ public class PlayingCard {
         // findStraightFlush(deck);
 
         // testTrioFrequency(deck, 100000); // Test with 10,000 rounds
-        // testRareHandsFrequency(deck, 100000); // Test with 20,000 rounds
+        testRareHandsFrequency(deck, 10000000); // Test with 20,000 rounds
     }
 
     // public static void testStraightFlushFrequency(List<String> deck, int rounds)
@@ -111,10 +111,10 @@ public class PlayingCard {
                 totalHands++;
                 int score = eval(hand);
 
-                if (score >= 6000) { // Trio
+                if (score >= 9000) { // Trio
                     trioCount++;
                     System.out.println("Trio found: " + hand + " (Round " + round + ")");
-                } else if (score >= 5000 && score < 6000) { // Straight flush
+                } else if (score >= 8000 && score < 9000) { // Straight flush
                     straightFlushCount++;
                     System.out.println("Straight flush found: " + hand + " (Round " + round + ")");
                 }
@@ -125,7 +125,7 @@ public class PlayingCard {
         double sfPercentage = (double) straightFlushCount / totalHands * 100;
 
         System.out.println("\n=== RESULTS ===");
-        System.out.println("Total hands tested: " + totalHands);
+        System.out.println("Total hands tested: " + totalHands + " in total round  :  " + rounds);
         System.out.println("Trios: " + trioCount + " (" + trioPercentage + "%)");
         System.out.println("Straight flushes: " + straightFlushCount + " (" + sfPercentage + "%)");
         System.out.println("Expected trio: ~0.235%");
@@ -298,7 +298,7 @@ public class PlayingCard {
     public static List<List<String>> teen(List<String> deck) {
         List<List<String>> ans = new ArrayList<>();
 
-        int playerCnt = 9;
+        int playerCnt = 10;
         for (int i = 0; i < playerCnt; i++) {
             ans.add(new ArrayList<>());
         }

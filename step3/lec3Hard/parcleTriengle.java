@@ -1,4 +1,4 @@
-package step3.lec3Hard;
+package step3.lec3hard;
 
 import java.util.*;
 
