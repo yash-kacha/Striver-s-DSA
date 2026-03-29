@@ -3,6 +3,7 @@ package forfun.primes;
 import java.util.*;
 
 public class SieveOfEratosthenes {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number : ");
@@ -11,7 +12,7 @@ public class SieveOfEratosthenes {
         long startTime = System.nanoTime(); // start timer
 
         // System.out.println(findPrimeInRange(n).toString());
-        findPrimeInRange(n);
+        System.out.println(findPrimeInRange(n).toString());
         long endTime = System.nanoTime(); // end timer
 
         long durationInMs = (endTime - startTime) / 1_000_000; // convert to ms
@@ -24,8 +25,9 @@ public class SieveOfEratosthenes {
         Arrays.fill(check, true);
 
         check[0] = false;
-        if (n >= 1)
+        if (n >= 1) {
             check[1] = false;
+        }
 
         int limit = (int) Math.sqrt(n);
 
@@ -38,8 +40,9 @@ public class SieveOfEratosthenes {
         }
 
         for (int i = 2; i <= n; i++) {
-            if (check[i])
+            if (check[i]) {
                 ans.add(i);
+            }
         }
 
         return ans;

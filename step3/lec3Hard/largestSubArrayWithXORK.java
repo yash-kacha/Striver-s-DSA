@@ -3,10 +3,11 @@ package step3.lec3hard;
 import java.util.*;
 
 public class largestSubArrayWithXORK {
+
     public static void main(String[] args) {
 
-        int[] in = new int[] { 4, 2, 2, 6, 4 };
-        int k = 6;
+        int[] in = new int[]{4, 2, 2, 6, 4};
+        int k = 2;
         System.out.println(brut(k, in));
     }
 
@@ -15,13 +16,15 @@ public class largestSubArrayWithXORK {
         for (int i = 0; i < in.length; i++) {
             int xor = in[i];
             for (int j = i + 1; j < in.length; j++) {
-                if (xor == k)
+                if (xor == k) {
                     ans++;
+                }
                 xor ^= in[j];
 
             }
-            if (xor == k)
+            if (xor == k) {
                 ans++;
+            }
         }
         return ans;
     }
